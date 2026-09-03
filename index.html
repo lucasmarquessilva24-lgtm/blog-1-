@@ -75,6 +75,25 @@
             padding: 2px 6px;
             border-radius: 3px;
         }
+
+        .video-container {
+            margin-top: 20px;
+            position: relative;
+            padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -90,6 +109,10 @@
         <button id="dislikeBtn" onclick="handleDislike()">
             <span>👎</span> Dislike <span class="counter" id="dislikeCount">0</span>
         </button>
+    </div>
+
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dyCwnXi-5v8?si=WItkBTBWMRqNyKBw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </div>
 
